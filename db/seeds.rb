@@ -22,9 +22,9 @@ snacks = Snack.create([
 ])
 
 cash = Cash.create([
-  {"id": 1, "name": "$5.00 bill", "quantity": 1, "value": 5   },
-  {"id": 2, "name": "$1.00 bill", "quantity": 2, "value": 1   },
-  {"id": 3, "name": "quarter"   , "quantity": 3, "value": 0.25},
-  {"id": 4, "name": "dime"      , "quantity": 4, "value": 0.1 },
-  {"id": 5, "name": "nickel"    , "quantity": 5, "value": 0.05}
+  {"id": 1, "name": "$5.00 bill", "quantity": 0  , "value": 5   },
+  {"id": 2, "name": "$1.00 bill", "quantity": 50 , "value": 1   },
+  {"id": 3, "name": "quarter"   , "quantity": 200, "value": 0.25},
+  {"id": 4, "name": "dime"      , "quantity": 500, "value": 0.1 },
+  {"id": 5, "name": "nickel"    , "quantity": 500, "value": 0.05}
 ])

@@ -1,0 +1,85 @@
+body {background-color: rgb(175, 255, 178);}
+button {
+  background-color: rgb(226, 230, 165);
+}
+input {background-color: rgb(226, 230, 165)}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#role-toggle {
+  margin-left: 10px;
+}
+#display table {
+  border: 1px solid;
+  margin-left: 10px;
+  border-collapse: collapse;
+}
+#display td {
+  border: 1px solid;
+  height: 90px;
+  width: 130px;
+  text-align: right;
+  margin: auto;
+  font-size: small;
+  padding: 5px;
+}
+#display input {
+  width: 70px;
+  font-size: small;
+}
+
+#display label {
+  display: inline-block;
+  text-align: right;
+}
+
+#display button {
+  margin: auto;
+  width: 100px;
+  height: 60px;
+}
+
+#dispenser div {
+  height: 70px;
+  width: 200px;
+  border: 1px solid;
+  margin-left: 10px;
+  background-color: rgb(226, 230, 165);
+  padding: 5px;
+}
+#cash-drawer table {
+  border: 1px solid;
+  margin: 10px;
+  border-collapse: collapse;
+}
+#cash-drawer table th {
+  border: 1px solid;
+}
+
+#cash-drawer td {
+  width: 100px;
+  border-left: 1px solid;
+  padding-left: 10px;
+}
+
+#return-money {margin-left: 10px;}
+
+button {
+  margin: 2px;
+}
+
+input[type=text], input[type=number] {
+  border: 1px solid;
+}
+
+input[type=submit] {
+  size: 5px;
+  margin: 10px 30px 0px 30px;
+}
+
+#cash-drawer table input {
+  width: 50px;
+}

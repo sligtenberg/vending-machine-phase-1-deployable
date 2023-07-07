@@ -13,18 +13,18 @@ snacks = Snack.create([
   {"id": 4 , "name": "Gummies" , "price": 2.5 , "quantity": 39},
   {"id": 5 , "name": "Crackers", "price": 1.5 , "quantity": 17},
   {"id": 6 , "name": "Popcorn" , "price": 0.75, "quantity": 3 },
-  {"id": 7 , "name": "Popcorn" , "price": 0.75, "quantity": 0 },
+  {"id": 7 , "name": "Toy"     , "price": 0.75, "quantity": 0 },
   {"id": 8 , "name": "Pretzels", "price": 1   , "quantity": 18},
-  {"id": 9 , "name": "Bagles"  , "price": 1.75, "quantity": 11},
-  {"id": 10, "name": "Soda"    , "price": 1   , "quantity": 31},
+  {"id": 9 , "name": "Gum"     , "price": 0.15, "quantity": 11},
+  {"id": 10, "name": "Coke"    , "price": 1   , "quantity": 31},
   {"id": 11, "name": "Soup"    , "price": 1.75, "quantity": 4 },
-  {"id": 12, "name": "Soup"    , "price": 1.75, "quantity": 5 }
+  {"id": 12, "name": "Ramen"   , "price": 1.75, "quantity": 5 }
 ])
 
 cash = Cash.create([
-  {"id": 1, "name": "$5.00 bill", "quantity": 1  , "value": 5   },
-  {"id": 2, "name": "$1.00 bill", "quantity": 47 , "value": 1   },
-  {"id": 3, "name": "quarter"   , "quantity": 199, "value": 0.25},
-  {"id": 4, "name": "dime"      , "quantity": 500, "value": 0.1 },
-  {"id": 5, "name": "nickel"    , "quantity": 500, "value": 0.05}
+  {"id": 1, "name": "$5.00 bill", "quantity": 1, "value": 5   },
+  {"id": 2, "name": "$1.00 bill", "quantity": 2, "value": 1   },
+  {"id": 3, "name": "quarter"   , "quantity": 3, "value": 0.25},
+  {"id": 4, "name": "dime"      , "quantity": 4, "value": 0.1 },
+  {"id": 5, "name": "nickel"    , "quantity": 5, "value": 0.05}
 ])

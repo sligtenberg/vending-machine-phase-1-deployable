@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vending Machine</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Stevo's Snack Sampler</h1>
+        <div id="role-toggle">
+            <input type="radio" name="role" value="customer" id="customer" checked>
+            <label for="customer">Customer</label>
+            <input type="radio" name="role" value="maintenance" id="maintenance">
+            <label for="maintenance">Maintenance</label>
+        </div>
+        <div id="display">
+            <h4>Display</h4>
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div id="add-money" class="customer">
+            <h4>Click to insert given denomination</h4>
+            <div>
+                <button type="button" value="0">$5.00 bill</button>
+                <button type="button" value="1">$1.00 bill</button>
+                <button type="button" value="2">Quarter</button>
+                <button type="button" value="3">Dime</button>
+                <button type="button" value="4">Nickel</button>
+            </div>
+            <div>Amount tendered: <span id="amt-tendered">$0.00</span><button type="button" id="return-money">Return money</button>
+            </div>
+        </div>
+        <div id="dispenser" class="customer">
+            <h4>Dispenser</h4>
+            <div>
+            </div>
+        </div>
+        <div id="cash-drawer" class="maintenance">
+            <h4>Cash Drawer</h4>
+            <button type="button">Auto reset</button>
+            <button type="button">Cancel</button>
+            <table>
+                <form>
+                    <input type="submit" value="Update">
+                    <tr>
+                        <th></th>
+                        <th>Current</th>
+                        <th>Add</th>
+                    </tr>
+                    <tr>
+                        <td>$5.00 bills:</td>
+                        <td></td>
+                        <td><input type="text" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>$1.00 bills:</td>
+                        <td></td>
+                        <td><input type="text" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Quarters:</td>
+                        <td></td>
+                        <td><input type="text" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Dimes:</td>
+                        <td></td>
+                        <td><input type="text" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Nickels:</td>
+                        <td></td>
+                        <td><input type="text" value="0"></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        <script src='index.js'></script>
+    </body>
+</html>

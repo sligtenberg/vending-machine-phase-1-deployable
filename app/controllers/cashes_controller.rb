@@ -4,7 +4,6 @@ class CashesController < ApplicationController
   end
 
   def update
-    #debugger
     cash = Cash.find(params[:id])
     cash.update(cash_params)
     render json: cash

@@ -53,6 +53,8 @@ In maintenance mode, a user can restock the machine with snacks, restock the mac
 
  ### Future plans & notes
 
- At the moment, there is a common scenario in which the vending machine should be able to make change, but will not. We try to make change using the highest denominations possible, which can result in the use of a quarter leading to a change-making impasse, when dimes would have worked. For example, if we need to make $0.30 in change, and the machine has no nickels, it will first add a quarter to the change, then get stuck since it cannot make $0.05 form dimes. However, if the machine has started with three dimes, it would have successfully made change.
+ A common scenario arises in which the vending machine should be able to make change, but will not. We try to make change using the highest denominations possible, which can result in the use of a quarter leading to a change-making impasse, when dimes would have worked. For example, if we need to make $0.30 in change, and the machine has no nickels, it will first add a quarter to the change, then get stuck since it cannot make $0.05 form dimes. However, had we started with three dimes, we could have made change $0.30. The change-making algorithm should be amended to handle this case.
+
+ Backend validators prevent bad data from persisting to the database, however, the frontend does not display error messages, or prevent the submission of all types of bad data. This functionality should be added.
 
  In the original implementation with a json server, a server error occurred when making make rapid patch requests. This issue is explored in detail in the debugging files in the json version of this project. The issue does not present in rails.

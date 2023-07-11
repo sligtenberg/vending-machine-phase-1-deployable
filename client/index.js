@@ -130,18 +130,17 @@ const displaySnack = snack => {
     const table = document.getElementById('display').children[1]
     let tableElement = table.rows[Math.floor((snack.id - 1) / table.rows[0].cells.length)].cells[(snack.id - 1) % table.rows[0].cells.length]
     tableElement.innerHTML = `
-        <button type="button" class="customer">
-            ${snack.name}<br>
-            $${snack.price.toFixed(2)}<br>
-            ${snack.quantity} left
-        </button>
-        <form class="maintenance">
-            <span>Name: </span> <input type="text" value="${snack.name}"><br>
-            <span>Price:</span> <input type="number" value="${snack.price.toFixed(2)}" min="0" step="0.05"><br>
-            <span>Quantiy:</span> <input type="number" value="${snack.quantity}" min="0"><br>
-            <input type="submit" value="Update"/>
-        </form>
-    `
+      <button type="button" class="customer">
+        ${snack.name}<br>
+        $${snack.price.toFixed(2)}<br>
+        ${snack.quantity} left
+      </button>
+      <form class="maintenance">
+        <span>Name:   </span><input type="text"   value="${snack.name}"       minlength="1" maxlength="12"><br>
+        <span>Price:  </span><input type="number" value="${snack.price.toFixed(2)}" min="0" max="25" step="0.05"><br>
+        <span>Quantiy:</span><input type="number" value="${snack.quantity}"         min="0" max="999"><br>
+        <input type="submit" value="Update"/>
+      </form>`
     applyRole()
     tableElement.children[0].addEventListener('click', () => handleSnackOrder(snack))
     tableElement.children[1].children[4].addEventListener('change', () => {

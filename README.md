@@ -14,6 +14,7 @@ To install and run Stevo's Snack Sampler locally, first clone the repository to 
 
 $ bundle install
 $ rails db:create
+$ rails db:migrate
 $ rails db:seed
 $ rails s
 

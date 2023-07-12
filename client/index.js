@@ -86,14 +86,14 @@ const tenderedMoney = {
 
 // populateSnackDisplay() fetches all the snacks from the server and sends them to the displaySnack functions
 const populateSnackDisplay = () => {
-    fetch('http://localhost:3000/snacks')
+    fetch('/snacks')
     .then(res => res.json())
     .then(snackCollection => snackCollection.forEach(displaySnack))
 }
 
 // populateCashDrawer fetches data from the server and uses it to populate the cash drawer current amounts
 const populateCashDrawer = () => {
-    fetch('http://localhost:3000/cashes')
+    fetch('/cashes')
     .then(res => res.json())
     .then(cashDrawer => {
         let table = document.getElementById('cash-drawer').children[4].children[1].children
@@ -105,7 +105,7 @@ const populateCashDrawer = () => {
 
 // updateSnackOnServer takes a snack object as an argument, and update that snack on the server via PATCH request
 const updateSnackOnServer = snack => {
-    fetch(`http://localhost:3000/snacks/${snack.id}`, {
+    fetch(`/snacks/${snack.id}`, {
         method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(snack)
@@ -115,7 +115,7 @@ const updateSnackOnServer = snack => {
 // sendMoneyInCashDrawer takes an array of money objects and sends them to the server via PATCH requests
 const sendMoneyInCashDrawer = moneyToSend => {
   moneyToSend.forEach(denomination => {
-    fetch(`http://localhost:3000/cashes/${denomination.id}`, {
+    fetch(`/cashes/${denomination.id}`, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(denomination)
@@ -227,7 +227,7 @@ const handleSnackOrder = snack => {
     if (snack.quantity === 0) updateDispenser(`Stevo's Snack Sampler is out of ${snack.name}`)
     else if (tenderedMoney.total() < snack.price) updateDispenser(`You need to enter more money to purchase ${snack.name}`)
     else {
-        fetch('http://localhost:3000/cashes')
+        fetch('/cashes')
         .then(res => res.json())
         .then(moneyInCashDrawer => {
             moneyInCashDrawer.sort((a, b) => a.id - b.id) // need moneyInCashDrawer to have matching index of tenderedMoney
@@ -265,7 +265,7 @@ const handleSnackOrder = snack => {
 // 2) loop through money array, adding the newly added amounts to the money on the server
 // 3) send the new array back to the server
 const handleCashDrawerSubmit = submittedMoney => {
-    fetch('http://localhost:3000/cashes')
+    fetch('/cashes')
     .then(res => res.json())
     .then(moneyInCashDrawer => {
       moneyInCashDrawer.forEach(denomination => {

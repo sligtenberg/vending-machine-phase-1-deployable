@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("loaded from client folder")
 
   // these functions run BEFORE USER INPUT
   // both add event listeners which vary based on data on the server

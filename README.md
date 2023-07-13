@@ -2,7 +2,7 @@
 
 Stevo's Snack Sampler is a vending machine interface, intended to provide a tasteful virtual vending machine experience. The goal is mimic a real-life vending machine for both customer interactions, and maintenance needs.
 
-This was my first javaScript project, and was initially build to use a json server with data stored in a local json file. This version has been adapted to run on rails, in hopes of deployment. This project was inspired by an assignment in Henry Rich's Java class, which I took at Raleigh Charter High School.
+This was my first JavaScript project, and was initially build to use a json server with data stored in a local json file. This version has been adapted to run on rails, in hopes of deployment. The project was inspired by an assignment in Henry Rich's Intro to Java class, which I took at Raleigh Charter High School.
 
 # Instructions
 
@@ -52,9 +52,13 @@ These commands install dependencies, create and seed the database, and start the
 $ cd client/
 $ open index.html
 
+Alternatively, open a browser and navigate to localhost:3000
+
 These commands open Stevo's Snack Sampler in a browser.
 
 # Future plans & notes
+
+Note that the contents of the public folder is identical to the contents of the client folder, except for one important detail - the host variable.
 
 A common scenario arises in which the vending machine should be able to make change, but will not. We try to make change using the highest denominations possible, which can result in the use of a quarter leading to a change-making impasse, when dimes would have worked. For example, if we need to make $0.30 in change, and the machine has no nickels, it will first add a quarter to the change, then get stuck since it cannot make $0.05 form dimes. However, had we started with three dimes, we could have made change $0.30. The change-making algorithm should be amended to handle this case.
 

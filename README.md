@@ -6,6 +6,8 @@ This was my first javaScript project, and was initially build to use a json serv
 
 # Implementation
 
+Repo: https://github.com/sligtenberg/vending-machine-phase-1-deployable
+
 Ruby 2.7.4
 Rails 7.0.6
 Node v16.17

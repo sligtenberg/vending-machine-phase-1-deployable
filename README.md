@@ -65,3 +65,8 @@ A common scenario arises in which the vending machine should be able to make cha
 Backend validators prevent bad data from persisting to the database, however, the frontend does not display error messages, or prevent the submission of all types of bad data. This functionality should be added.
 
 In the original implementation with a json server, a server error occurred when making make rapid patch requests. This issue is explored in detail in the debugging files in the json version of this project. The issue does not present in rails.
+
+Check out my other vending machine project - VendVille!
+
+VendVille repo: https://github.com/sligtenberg/vending-machine-phase-4-deployable
+VendVille live app: https://vending-machine-phase-4-deployable-app.onrender.com/
